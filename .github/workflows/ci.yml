@@ -16,16 +16,15 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - uses: lukewilliamboswell/roc-automation/actions/setup-blueprint@8454f8ed9acc026c85e31e87b132dfeeaf9f1b81
+      - uses: ./.github/actions/setup-kai
         with:
-          cache: 'true'
           cache-workload: screenshots
       - uses: roc-lang/setup-roc@f5a74bf90aa694b43ab4a7cbfdb19273bc6aa697
         with:
           version: nightly-new-compiler
-      - run: blueprint check
-      - run: blueprint run screenshots-setup -- --with-deps
-      - run: blueprint run screenshots
+      - run: kai check
+      - run: kai run screenshots-setup -- --with-deps
+      - run: kai run screenshots
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
