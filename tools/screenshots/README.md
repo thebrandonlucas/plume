@@ -5,14 +5,14 @@ Use Node.js 18 or later, npm and the Chromium system dependencies documented by
 Provision the locked JavaScript packages and matching Chromium headless shell:
 
 ```sh
-blueprint run screenshots-setup
-blueprint run screenshots
-blueprint run screenshots-update
+kai run screenshots-setup
+kai run screenshots
+kai run screenshots-update
 ```
 
 The normal check also ensures the packages and browser are installed. Setup
 without flags downloads into the user browser cache and never installs system
-packages. CI uses `blueprint run screenshots-setup -- --with-deps` to install
+packages. CI uses `kai run screenshots-setup -- --with-deps` to install
 its OS dependencies explicitly. Only the headless shell is downloaded.
 
 The check builds and runs the current examples using the first successful case

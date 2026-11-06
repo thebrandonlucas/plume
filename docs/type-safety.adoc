@@ -43,7 +43,7 @@ data in the encoded output.
 
 == Keep the contract executable
 
-`blueprint run check` runs four complementary forms of evidence:
+`kai run check` runs four complementary forms of evidence:
 
 * Named unit tests check exact output, enum mappings and boundary failures.
 * Consumer tests use the public API and independently decode the JSON.

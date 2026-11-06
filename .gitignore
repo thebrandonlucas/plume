@@ -21,7 +21,8 @@ generated-docs/
 
 out.html
 
-.blueprint/
+/.kai/*
+!/.kai/lock.json
 .docs-out/
 dist/
 .roc-cache/
