@@ -15,9 +15,9 @@ main! : List(OsStr) => Try({}, _)
 main! = |_args| {
 	run!({ program: "roc", args: ["version"] })?
 	run!({ program: "roc-stable", args: ["version"] })?
-	run!({ program: "roc", args: ["fmt", "--check", "Blueprint.roc", "package", "examples", "tests", "fuzz"] })?
+	run!({ program: "roc", args: ["fmt", "--check", "Kaifile.roc", "package", "examples", "tests", "fuzz"] })?
 	run!({ program: "roc-stable", args: ["fmt", "--check", "scripts"] })?
-	run!({ program: "roc-policy", args: ["check", "--root", "."] })?
+	run!({ program: "roc-policy", args: ["check", "--root", ".", "--config", "Kaifile.roc"] })?
 	run!({ program: "roc", args: ["test", "--opt=dev", "package/main.roc"] })?
 	run!({ program: "roc-stable", args: ["test", "--opt=dev", "scripts/type_safety.roc"] })?
 	run!({ program: "roc-stable", args: ["scripts/type_safety.roc"] })?

@@ -134,9 +134,9 @@ or `to_html` output instead of these hooks.
 == Browse the API reference
 
 Browse the link:api/index.html[API reference]. To generate it locally, run
-`blueprint run api-docs` and open `generated-docs/index.html`. The generated
+`kai run api-docs` and open `generated-docs/index.html`. The generated
 pages describe each constructor, its props, defaults, closed choices and
-failure tags. `blueprint run policy` checks that public definitions have
-attached documentation, and `blueprint run check` runs the same policy gate.
+failure tags. `kai run policy` checks that public definitions have
+attached documentation, and `kai run check` runs the same policy gate.
 Presence checks do not judge clarity or completeness: review the rendered
 pages whenever public types, options or behavior change.

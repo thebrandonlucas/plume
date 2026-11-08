@@ -26,7 +26,7 @@ let browser;
 
 try {
   const pinned = JSON.parse(await readFile(new URL('./package.json', import.meta.url), 'utf8'));
-  assert.equal(require('playwright/package.json').version, pinned.dependencies.playwright, 'Run blueprint run screenshots-setup to install the locked Playwright version');
+  assert.equal(require('playwright/package.json').version, pinned.dependencies.playwright, 'Run kai run screenshots-setup to install the locked Playwright version');
   const core = dirname(require.resolve('playwright-core/package.json'));
   const browserInventory = JSON.parse(await readFile(join(core, 'browsers.json'), 'utf8'));
   const pinnedBrowser = browserInventory.browsers.find(browser => browser.name === 'chromium-headless-shell');
